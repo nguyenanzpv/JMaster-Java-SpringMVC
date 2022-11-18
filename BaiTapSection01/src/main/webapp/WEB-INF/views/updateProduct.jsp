@@ -11,7 +11,7 @@
 </head>
 <body>
 	<p>Form san pham</p>
-	<c:url value="/update-product" var="url"/>
+	<c:url value="/update-product/{name}" var="url"/>
 	<form:form modelAttribute="product" method="post" action="${url}">
 		<form:hidden path="id"/>
 		<p>Name</p><form:input path="name"/>

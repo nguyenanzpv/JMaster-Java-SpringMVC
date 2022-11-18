@@ -12,7 +12,7 @@
 <body>
 	<p>Form nguoi dung</p>
 	<c:url value="/add-user" var="url"/>
-	<form:form modelAttribute="user" method="post" action="${url }">
+	<form:form modelAttribute="user" method="post" action="${url}">
 		<form:hidden path="id"/>
 		<p>Name</p><form:input path="name"/>
 		<p style="color: red;"><form:errors path="name"></form:errors></p>

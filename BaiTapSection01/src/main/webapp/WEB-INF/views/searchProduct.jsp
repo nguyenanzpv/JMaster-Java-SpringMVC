@@ -24,5 +24,28 @@
 <%-- 		<p style="color: red;"><form:errors path="description"></form:errors></p> --%>
 		<button type="submit">Submit</button>
 	</form:form>
+	<p>Danh sach Product</p>
+	<tabel>
+		<th>
+			<td>Id</td>
+			<td>Name</td>
+			<td>Price</td>
+			<td>Quantity</td>
+			<td>Description</td>
+			<td>Image Url</td>
+		</th>
+		<br/>
+		<c:forEach items="${lstProduct}" var="product">
+			<tr>
+				<td>${product.id }</td>
+				<td>${product.name }</td>
+				<td>${product.price }</td>
+				<td>${product.quantity }</td>
+				<td>${product.description }</td>
+				<td>${product.imageUrl }</td>
+			</tr>
+			<br/>
+		</c:forEach>
+	</tabel>
 </body>
 </html>

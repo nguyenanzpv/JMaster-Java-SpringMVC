@@ -12,9 +12,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import com.java.validator.ProductValidator;
+import com.java.validator.UserValidator;
+
 @Configuration //khai bao day la file cau hinh
 @EnableWebMvc //cho phep spring su dung cac annotation de cau hinh
-@ComponentScan(basePackages = "com.java.springmvc") //scan trong package
+@ComponentScan(basePackages = {"com.java.model","com.java.springmvc"}) //scan trong package
 //tuong tu spring-servlet.xml
 public class BaiTapSection01Configuration extends WebMvcConfigurerAdapter {
 	@Bean //khai bao day la 1 bean can ioc khoi tao va luu giu
@@ -39,5 +42,14 @@ public class BaiTapSection01Configuration extends WebMvcConfigurerAdapter {
 		bundleMessageSource.setBasename("classpath:messages");
 		bundleMessageSource.setDefaultEncoding("utf-8");
 		return bundleMessageSource;
+	}
+	
+	@Bean
+	public UserValidator userValidator() {
+		return new UserValidator();
+	}
+	
+	@Bean ProductValidator productValidator() {
+		return new ProductValidator();
 	}
 }

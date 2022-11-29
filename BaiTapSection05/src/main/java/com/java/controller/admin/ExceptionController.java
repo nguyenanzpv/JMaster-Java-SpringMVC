@@ -22,4 +22,10 @@ public class ExceptionController {
         logger.error(exception);
 		return "500";
 	}
+	
+	@ExceptionHandler(value = { Exception.class })
+	public String exception(Exception exception) {
+        logger.error(exception);
+		return "404";
+	}
 }

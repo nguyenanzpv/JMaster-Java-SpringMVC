@@ -82,7 +82,7 @@ public class UserController {
 	@RequestMapping(value = "/edit/{userId}", method = RequestMethod.GET)
 	public String editUser(HttpServletRequest request, @PathVariable(name = "userId") int userId) {
 		request.setAttribute("user", userService.getById(userId));
-		return "editUser";
+		return "editUser";//tra ve tile view
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST)

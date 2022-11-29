@@ -16,6 +16,7 @@ public class WebInittalizer implements WebApplicationInitializer {
 		ctx.register(SpringConfiguration.class);
 		ctx.setServletContext(servletContext);
 
+		//config dispatcherservlet cho exception
 		DispatcherServlet dispatcherServlet = new DispatcherServlet(ctx);
 		dispatcherServlet.setThrowExceptionIfNoHandlerFound(true);
 

@@ -10,9 +10,6 @@
   <properties>
   	<springframework.version>4.0.6.RELEASE</springframework.version>
   	<servlet.version>3.1.0</servlet.version>
-  	<maven.compiler.version>3.8.1</maven.compiler.version>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
 	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
  </properties>
 	<dependencies>
@@ -144,26 +141,17 @@
 
 	</dependencies>
   <build>
-  	<plugins>
-		<plugin>
-		      <groupId>org.apache.maven.plugins</groupId>
-		      <artifactId>maven-compiler-plugin</artifactId>
-		      <version>${maven.compiler.version}</version>
-		      <configuration>
-		        <source>${java.version}</source>
-		        <target>${java.version}</target>
-		      </configuration>
-		    </plugin>
-	        <plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-war-plugin</artifactId>
-	            <version>3.3.1</version>
-	            <configuration>
-	            	<warSourceDirectory>src/main/webapp</warSourceDirectory>
-	            	<warName>Hello</warName>
-	            	<failOnMissingWebXml>false</failOnMissingWebXml> <!--chi dinh dung java config ko can web xml nua-->
-	            </configuration>
-	        </plugin>
+  	<plugins>		
+	    <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.1</version>
+            <configuration>
+            	<warSourceDirectory>src/main/webapp</warSourceDirectory>
+            	<warName>Hello</warName>
+            	<failOnMissingWebXml>false</failOnMissingWebXml> <!--chi dinh dung java config ko can web xml nua-->
+            </configuration>
+        </plugin>
 	</plugins>
     <finalName>BaiTapSection05</finalName>
   </build>

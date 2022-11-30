@@ -2,8 +2,15 @@
 <%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
 
-<c:url value="/user/add" var="url"/>
+<security:authorize access="isAuthenticated()">
+	<security:authentication property="principal" var="user" />
+		Welcome, ${user.username }
+	<a href="<c:url value='/dang-xuat'/>">Thoat</a>
+</security:authorize>
+
+<c:url value="/admin/add" var="url"/>
 <form:form modelAttribute="user" method="post" action="${url}" enctype="multipart/form-data">
     <form:hidden path="id"/>
     <p><spring:message code="user.username"/>:</p><form:input path="username"/>

@@ -29,4 +29,4 @@
     </c:forEach>
     </tbody>
 </table>
-<a href="<c:url value = '/user/add'/>">Add</a>|
+<a href="<c:url value = '/admin/add'/>">Add</a>|

@@ -22,7 +22,7 @@ import com.java.service.UserService;
 import com.java.validator.UserValidator;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/admin")
 public class UserController {
 
 	@Autowired

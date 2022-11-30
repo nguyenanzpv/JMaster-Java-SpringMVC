@@ -3,7 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <h3>Form nguoi dung</h3>
-<c:url value="/user/edit" var = "url"/>
+<c:url value="/admin/edit" var = "url"/>
 <form:form modelAttribute="user" method="post" action="${url}" enctype="multipart/form-data">
     <form:hidden path="id"/>
     <p><spring:message code="user.username"/>:</p><form:input path="username"/>

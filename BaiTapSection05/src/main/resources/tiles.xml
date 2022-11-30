@@ -23,6 +23,9 @@
     <definition name="editUser" extends="base-definition">
         <put-attribute name="body" value="/WEB-INF/views/user/edit.jsp"/>
     </definition>
+     <definition name="login" extends="base-definition">
+        <put-attribute name="body" value="/WEB-INF/views/user/login.jsp"/>
+    </definition>
 
     <!-- Product Page -->
     <definition name="addProduct" extends="base-definition">
